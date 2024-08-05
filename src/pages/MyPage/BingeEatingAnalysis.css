@@ -1,0 +1,129 @@
+.binge-eating-analysis {
+  margin: 30px 0 0 6px;
+}
+
+.binge-eating-title{
+  font-weight: 700;
+  font-size: 14px;
+  color: #202023;
+  margin: 24px 0 20px 0;
+}
+
+.meal-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+  
+.meal-box {
+  width: 173px;
+  height: 166px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+  
+.meal-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #696A73;
+  margin-bottom: 10px;
+}
+  
+.meal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+  
+.meal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+  
+.number {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFCF24;
+}
+  
+.emotion {
+  width: 18px;
+  height: 18px;
+}
+  
+.count {
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFCF24;
+}
+  
+.meal-comment {
+  font-weight: 600;
+  font-size: 14px;
+  color: #202023;
+  margin-top: 10px;
+  text-align: center;
+}
+  
+.time-eating-analysis {
+  margin-top: 20px;
+}
+
+.time-eating-container {
+  width: 358px;
+  height: 112px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 내부 항목 왼쪽 정렬 */
+  margin-bottom: 50px;
+}
+
+.time-eating-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #505258;
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+
+.time-eating-bar {
+  display: flex;
+  width: 324px;
+  height: 24px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto; /* 상하 여백 추가 및 중앙 정렬 */
+}
+
+.time-eating-segment {
+  height: 100%;
+}
+
+.time-eating-labels {
+  display: flex;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  width: 100%;
+  padding: 0 10px; /* 좌우 패딩 추가 */
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.time-eating-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 10px; /* 라벨 사이의 간격 조절 */
+}
+
+.time-eating-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}

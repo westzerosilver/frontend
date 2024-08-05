@@ -1,0 +1,45 @@
+.weekly-report {
+  margin: 20px 0 0 6px;
+}
+
+.weekly-report-title-container {
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.weekly-report-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #202023;
+}
+
+.weekly-report-date {
+  font-size: 16px;
+  font-weight: 500;
+  color: #9C9EA5;
+  margin-left: 5px;
+}
+
+.weekly-report-message-container {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+}
+
+.weekly-report-message {
+  width: 240px;
+  height: 36px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #38393D;
+}
+
+.weekly-report-chart-container {
+  max-width: 177px;
+  margin: 0 auto; /* 좌우 마진을 자동으로 설정하여 중앙 배치 */
+}

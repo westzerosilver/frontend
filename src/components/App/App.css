@@ -1,0 +1,12 @@
+.App {
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #F7F7F8;
+}
+
+@media (max-width: 390px) {
+  .App {
+    /* 미디어 쿼리, 화면 너비가 390픽셀 이하일 때 적용 */
+    padding: 10px;
+  }
+}

@@ -1,0 +1,227 @@
+.meal-end-container {
+    width: 390px;
+    height: 844px;
+    background-color: #F7F7F8; /* 컨테이너 배경색을 회색으로 변경 */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.end-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.end-form .emotion-group,
+.end-form .symptom-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-end-feeling {
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-top: 100px;  /* 간격을 늘림 */
+    margin-bottom: 40px;  /* 간격을 늘림 */
+}
+
+.symptom-group label {
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.end-form .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.end-form .options .option {
+    display: flex;
+    height: 30px;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.end-form .options .option.active {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.memo-input {
+    padding: 19px 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #ffffff; /* 메모 입력창 배경색을 흰색으로 변경 */
+    height: 60px;
+}
+
+.memo-input::placeholder {
+    color: #000;
+}
+
+.end-form .emotion-group .meal-feelings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.end-form .emotion-group .meal-feelings .feeling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-size: 23px 23px; /* 원래 크기 */
+    background-position: center top; /* 원래 위치 */
+    background-repeat: no-repeat;
+}
+
+.end-form .emotion-group .meal-feelings .feeling.active {
+    background-size: 23px 23px; /* 원래 크기 */
+    background-position: center top; /* 원래 위치 */
+}
+
+.end-form .emotion-group .meal-feelings .feeling span {
+    margin-top: 30px; /* 원래 위치 */
+}
+
+.feeling-COMFORTABLE {
+    background-image: url(../../assets/icon-mood-smile.png);
+}
+
+.feeling-COMFORTABLE.active {
+    background-image: url(../../assets/icon-mood-smile-filled.png);
+}
+
+.feeling-HAPPY {
+    background-image: url(../../assets/icon-mood-happy.png);
+}
+
+.feeling-HAPPY.active {
+    background-image: url(../../assets/icon-mood-happy-filled.png);
+}
+
+.feeling-EASY {
+    background-image: url(../../assets/icon-mood-empty-2.png);
+}
+
+.feeling-EASY.active {
+    background-image: url(../../assets/icon-mood-empty-filled.png);
+}
+
+.feeling-GUILT {
+    background-image: url(../../assets/icon-mood-sad.jpg);
+}
+
+.feeling-GUILT.active {
+    background-image: url(../../assets/icon-mood-sad-filled.png);
+}
+
+.feeling-IRRITATE {
+    background-image: url(../../assets/icon-mood-angry.png);
+}
+
+.feeling-IRRITATE.active {
+    background-image: url(../../assets/icon-mood-angry-filled.png);
+}
+
+.feeling-ANXIOUS {
+    background-image: url(../../assets/icon-mood-wrrr.png);
+}
+
+.feeling-ANXIOUS.active {
+    background-image: url(../../assets/icon-mood-wrrr-filled.png);
+}
+
+.feeling-LONELY {
+    background-image: url(../../assets/icon-mood-confuzed.png);
+}
+
+.feeling-LONELY.active {
+    background-image: url(../../assets/icon-mood-confuzed-filled.png);
+}
+
+
+.other-input {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #ffffff; /* 기타 입력창 배경색을 흰색으로 변경 */
+    height: 60px;
+    width: 100%;
+}
+
+.other-input::placeholder {
+    color: #000; /* 기타 입력창 placeholder 색을 검정색으로 변경 */
+}
+
+.end-meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.end-meal button {
+    display: flex;
+    width: 350px;
+    height: 56px;
+    padding: 16px 105px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    background: var(--gray-40, #9C9EA5);
+    border: none;
+    cursor: not-allowed;
+    transition: background-color 0.3s;
+    color: var(--gray-05, #F7F7F8);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 16px;
+}
+
+.end-meal button.active {
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}

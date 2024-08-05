@@ -1,0 +1,550 @@
+/* 공통 스타일 */
+.food-diary-detail {
+    width: 390px;
+    height: 844px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* 스크롤이 가능하도록 설정 */
+}
+
+.meal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto; /* 높이를 자동으로 조정하도록 설정 */
+    box-sizing: border-box;
+}
+
+.meal-record-end-container{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.record-form,
+.end-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .date {
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.header .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .icons .icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .icons .close-icon {
+    background-image: url(../../assets/icon-close.png);
+}
+
+
+.record-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.record-form .time-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.time-group {
+    position: relative;
+}
+
+.time-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.time-display .record-time {
+    color: #82838D;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.time-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icon-direction.png);
+    border: none;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.time-picker-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.custom-time-picker .react-ios-time-picker__hour__up,
+.custom-time-picker .react-ios-time-picker__hour__down,
+.custom-time-picker .react-ios-time-picker__minute__up,
+.custom-time-picker .react-ios-time-picker__minute__down {
+    display: none;
+}
+
+.custom-time-picker .react-ios-time-picker__hour__box,
+.custom-time-picker .react-ios-time-picker__minute__box {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.record-form .time-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.record-form .time-selector input {
+    color: #82838D;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    width: 100px;
+}
+
+.record-form .time-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.record-form .time-buttons .time-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.record-form .meal-group, 
+.record-form .menu-group, 
+.record-form .who-group, 
+.record-form .where-group, 
+.record-form .emotion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.record-form label {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.record-form .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.record-form .options .option {
+    display: flex;
+    height: 30px;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #F7F7F8;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.record-form .options .option.active {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.record-form .menu-group textarea {
+    padding: 19px 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #f5f5f5;
+    height: 60px;
+}
+
+.record-form .menu-group textarea::placeholder {
+    color: #000;
+}
+
+.record-form .menu-group .upload-btn {
+    display: block;
+    width: 96px;
+    height: 96px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 96px;
+    position: relative;
+}
+
+.record-form .menu-group .upload-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--gray-05, #F6F6F6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-form .menu-group .upload-placeholder::before {
+    content: '';
+    background-image: url(../../assets/icon-upload.png);
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.record-form .menu-group .uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.record-form .who-group .options, 
+.record-form .where-group .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.record-form .who-group input.other-input, 
+.record-form .where-group input.other-input {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #f5f5f5;
+    height: 60px;
+}
+
+.record-form .who-group input.other-input::placeholder,
+.record-form .where-group input.other-input::placeholder {
+    color: #000;
+}
+
+.record-form .emotion-group .meal-feelings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.record-form .emotion-group .meal-feelings .feeling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-size: 23px 23px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.record-form .emotion-group .meal-feelings .feeling span {
+    margin-top: 30px;
+}
+
+.end-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.end-form .emotion-group,
+.end-form .symptom-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.end-form label {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.symptom-group label {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.end-form .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.end-form .options .option {
+    display: flex;
+    height: 30px;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #F7F7F8;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.end-form .options .option.active {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.memo-input {
+    padding: 19px 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #F7F7F8; /* 메모 입력창 배경색을 흰색으로 변경 */
+    height: 60px;
+}
+
+.memo-input::placeholder {
+    color: #000;
+}
+
+.end-form .emotion-group .meal-feelings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.end-form .emotion-group .meal-feelings .feeling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-size: 23px 23px; /* 원래 크기 */
+    background-position: center top; /* 원래 위치 */
+    background-repeat: no-repeat;
+}
+
+.end-form .emotion-group .meal-feelings .feeling.active {
+    background-size: 23px 23px; /* 원래 크기 */
+    background-position: center top; /* 원래 위치 */
+}
+
+.end-form .emotion-group .meal-feelings .feeling span {
+    margin-top: 30px; /* 원래 위치 */
+} 
+.other-input {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #ffffff; /* 기타 입력창 배경색을 흰색으로 변경 */
+    height: 60px;
+    width: 100%;
+}
+
+.other-input::placeholder {
+    color: #000; /* 기타 입력창 placeholder 색을 검정색으로 변경 */
+}
+
+.meal-record-container .end-form .emotion-group .meal-feelings .feeling span {
+    margin-top: 30px;
+}
+
+/* 감정 아이콘 */
+.feeling-COMFORTABLE {
+    background-image: url(../../assets/icon-mood-smile.png);
+}
+
+.feeling-COMFORTABLE.active {
+    background-image: url(../../assets/icon-mood-smile-filled.png);
+}
+
+.feeling-HAPPY {
+    background-image: url(../../assets/icon-mood-happy.png);
+}
+
+.feeling-HAPPY.active {
+    background-image: url(../../assets/icon-mood-happy-filled.png);
+}
+
+.feeling-EASY {
+    background-image: url(../../assets/icon-mood-empty-2.png);
+}
+
+.feeling-EASY.active {
+    background-image: url(../../assets/icon-mood-empty-filled.png);
+}
+
+.feeling-GUILT {
+    background-image: url(../../assets/icon-mood-sad.jpg);
+}
+
+.feeling-GUILT.active {
+    background-image: url(../../assets/icon-mood-sad-filled.png);
+}
+
+.feeling-IRRITATE {
+    background-image: url(../../assets/icon-mood-angry.png);
+}
+
+.feeling-IRRITATE.active {
+    background-image: url(../../assets/icon-mood-angry-filled.png);
+}
+
+.feeling-ANXIOUS {
+    background-image: url(../../assets/icon-mood-wrrr.png);
+}
+
+.feeling-ANXIOUS.active {
+    background-image: url(../../assets/icon-mood-wrrr-filled.png);
+}
+
+.feeling-LONELY {
+    background-image: url(../../assets/icon-mood-confuzed.png);
+}
+
+.feeling-LONELY.active {
+    background-image: url(../../assets/icon-mood-confuzed-filled.png);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    display: flex;
+    width: 175px; 
+    height: 56px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; 
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    background-color: #FFE589;
+    border-radius: 29px;
+}
+
+.delete-button {
+    display: flex;
+    width: 175px;
+    height: 56px;
+    padding: 10px 20px; 
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #202023;
+    border-radius: 29px;
+}
+
+

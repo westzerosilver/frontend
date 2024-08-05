@@ -1,0 +1,511 @@
+/* 공통 스타일 */
+.foodDiaryDetailPage {
+    width: 390px;
+    height: 844px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mealRecordContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto; /* 높이를 자동으로 조정하도록 설정 */
+    box-sizing: border-box;
+}
+
+.mealRecordEndContainer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.recordForm,
+.endForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.mealRecordHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mealRecordHeaderDate {
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.mealRecordHeaderIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.mealRecordHeaderIcon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mealRecordHeaderCloseIcon {
+    background-image: url(../../assets/icon-close.png);
+}
+
+.recordFormTimeGroup {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.recordFormTimeDisplay {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.recordFormTimeDisplayRecordTime {
+    color: #82838D;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.recordFormTimeIcon {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icon-direction.png);
+    border: none;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.recordFormTimePickerContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.customTimePicker .reactIosTimePickerHourUp,
+.customTimePicker .reactIosTimePickerHourDown,
+.customTimePicker .reactIosTimePickerMinuteUp,
+.customTimePicker .reactIosTimePickerMinuteDown {
+    display: none;
+}
+
+.customTimePicker .reactIosTimePickerHourBox,
+.customTimePicker .reactIosTimePickerMinuteBox {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.recordFormTimeSelector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recordFormTimeSelectorInput {
+    color: #82838D;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    width: 100px;
+}
+
+.recordFormTimeButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.recordFormTimeButton {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.recordFormMealGroup,
+.recordFormMenuGroup,
+.recordFormWhoGroup,
+.recordFormWhereGroup,
+.recordFormEmotionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recordFormLabel {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.recordFormOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.recordFormOption {
+    display: flex;
+    height: 30px;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #F7F7F8;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.recordFormOptionActive {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.recordFormMenuGroupTextarea {
+    padding: 19px 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #f5f5f5;
+    height: 60px;
+}
+
+.recordFormMenuGroupTextareaPlaceholder {
+    color: #000;
+}
+
+.recordFormMenuGroupUploadBtn {
+    display: block;
+    width: 96px;
+    height: 96px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 96px;
+    position: relative;
+}
+
+.recordFormMenuGroupUploadPlaceholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--gray-05, #F6F6F6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recordFormMenuGroupUploadPlaceholderBefore {
+    content: '';
+    background-image: url(../../assets/icon-upload.png);
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.recordFormMenuGroupUploadedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recordFormWhoGroupOptions,
+.recordFormWhereGroupOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.recordFormWhoGroupInputOtherInput,
+.recordFormWhereGroupInputOtherInput {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #f5f5f5;
+    height: 60px;
+}
+
+.recordFormWhoGroupInputOtherInputPlaceholder,
+.recordFormWhereGroupInputOtherInputPlaceholder {
+    color: #000;
+}
+
+.recordFormEmotionGroupMealFeelings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recordFormEmotionGroupMealFeelingsFeeling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-size: 23px 23px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.recordFormEmotionGroupMealFeelingsFeelingSpan {
+    margin-top: 30px;
+}
+
+.endForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.endFormEmotionGroup,
+.endFormSymptomGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.endFormLabel {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.symptomGroupLabel {
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.endFormOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.endFormOption {
+    display: flex;
+    height: 30px;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #F7F7F8;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+}
+
+.endFormOptionActive {
+    background-color: #000;
+    color: #ffffff;
+    border-color: #000;
+}
+
+.memoInput {
+    padding: 19px 10px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #F7F7F8;
+    height: 60px;
+}
+
+.memoInputPlaceholder {
+    color: #000;
+}
+
+.endFormEmotionGroupMealFeelingsFeelingSpan {
+    margin-top: 30px;
+}
+
+.otherInput {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #ffffff;
+    height: 60px;
+    width: 100%;
+}
+
+.otherInputPlaceholder {
+    color: #000;
+}
+
+.mealRecordContainerEndFormEmotionGroupMealFeelingsFeelingSpan {
+    margin-top: 30px;
+}
+
+/* 감정 아이콘 */
+.feelingCOMFORTABLE {
+    background-image: url(../../assets/icon-mood-smile.png);
+}
+
+.feelingCOMFORTABLEActive {
+    background-image: url(../../assets/icon-mood-smile-filled.png);
+}
+
+.feelingHAPPY {
+    background-image: url(../../assets/icon-mood-happy.png);
+}
+
+.feelingHAPPYActive {
+    background-image: url(../../assets/icon-mood-happy-filled.png);
+}
+
+.feelingEASY {
+    background-image: url(../../assets/icon-mood-empty-2.png);
+}
+
+.feelingEASYActive {
+    background-image: url(../../assets/icon-mood-empty-filled.png);
+}
+
+.feelingGUILT {
+    background-image: url(../../assets/icon-mood-sad.jpg);
+}
+
+.feelingGUILTActive {
+    background-image: url(../../assets/icon-mood-sad-filled.png);
+}
+
+.feelingIRRITATE {
+    background-image: url(../../assets/icon-mood-angry.png);
+}
+
+.feelingIRRITATEActive {
+    background-image: url(../../assets/icon-mood-angry-filled.png);
+}
+
+.feelingANXIOUS {
+    background-image: url(../../assets/icon-mood-wrrr.png);
+}
+
+.feelingANXIOUSActive {
+    background-image: url(../../assets/icon-mood-wrrr-filled.png);
+}
+
+.feelingLONELY {
+    background-image: url(../../assets/icon-mood-confuzed.png);
+}
+
+.feelingLONELYActive {
+    background-image: url(../../assets/icon-mood-confuzed-filled.png);
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.editBtn {
+    display: flex;
+    width: 175px; 
+    height: 56px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; 
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    background-color: #FFE589;
+    border-radius: 29px;
+}
+
+.deleteBtn {
+    display: flex;
+    width: 175px;
+    height: 56px;
+    padding: 10px 20px; 
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #202023;
+    border-radius: 29px;
+}

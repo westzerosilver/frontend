@@ -1,0 +1,89 @@
+.positive-meal-container {
+  width: 100%;
+  max-width: 390px;
+  height: 148px;
+  background-color: #FFF0BD;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.positive-meal-header {
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #202023;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tags-and-emotion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 태그들을 한 줄에 배치하고 감정 컨테이너를 아래로 밀기 */
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap; /* 태그들을 한 줄에 배치하고 필요 시 줄바꿈 */
+  gap: 1px; 
+}
+
+.tag {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 7px 15px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #202023;
+  margin: 5px;
+}
+
+.emotion-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 133px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #FFDA57;
+  margin-top: 10px; /* 태그들과 감정 컨테이너 사이의 간격 조정 */
+}
+
+.emotion-tag {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: #202023;
+}
+
+.emotion-text {
+  font-size: 12px;
+}
+
+.self-diagnosis-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px
+}
+
+.self-diagnosis-button {
+  width: 350px;
+  height: 56px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #202023;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.self-diagnosis-button .arrow {
+  font-size: 16px;
+  color: #9C9EA5;
+}
