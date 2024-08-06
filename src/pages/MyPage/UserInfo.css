@@ -1,0 +1,105 @@
+.user-info-container {
+  display: flex;
+  flex-direction: column; /* 수직 정렬을 위해 flex-direction을 column으로 설정 */
+  align-items: center; /* 수평 중앙 정렬 */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 358px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* user-info와 간격을 주기 위해 추가 */
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #202023;
+}
+
+.icons .icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;  /* 아이콘 사이 여백 */
+}
+
+.user-info {
+  width: 358px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 13px;
+}
+
+.user-img {
+  width: 64px;
+  height: 64px;
+  margin-left: 8px;
+  border-radius: 50%;
+  object-fit: cover; /* 이미지가 박스에 맞게 조절됨 */
+}  
+
+.user-detail {
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.user-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #202023;
+}
+
+.user-days {
+  font-weight: 600;
+  color: #202023;
+}
+
+.days-managed {
+  color: #505258;
+  margin-left: 15px;
+}
+
+.completion-status-container {
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+}
+
+.completion-status {
+  width: 358px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  margin: 20px 5px 15px 5px;
+  border-radius: 13px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.status-count {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #696A73;
+}
+
+.center-line {
+  height: 72px;
+}
+
+.status-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #202023;
+}
