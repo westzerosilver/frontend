@@ -1,0 +1,107 @@
+.settings-profile-container {
+    width: 100%;
+    max-width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #F7F7F8;
+    min-height: 100vh;
+}
+  
+.settings-profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-top: 30px;
+}
+  
+.back-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+  
+.settings-profile-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #202023;
+}
+  
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+  
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* 이미지가 박스에 맞게 조절됨 */
+}
+  
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+  
+.change-picture-text {
+    text-align: center;
+    font-size: 14.5px;
+    color: #9C9EA5;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+  
+.name-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+  
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+  
+.name-input {
+    width: 358px;
+    height: 56px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+}
+
+.name-input:focus {
+    outline: ridge;
+    background-color: #F7F7F8;
+}
+  
+.save-button {
+    width: 320px;
+    height: 56px;
+    padding: 15px;
+    background-color: #202023;
+    color: #F7F7F8;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 35px;
+    margin-top: 400px;
+}
